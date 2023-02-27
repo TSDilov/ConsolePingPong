@@ -12,12 +12,14 @@
             var secondPlayerPosition = 0;
 
             RemoveScrollBars();
-
+            var drawer = new Drawer(new Writer());
             while (true)
             {
+                Console.CursorVisible = false;
+                drawer.DrawFirstPlayer(firstPlayerPosition, firstPlayerBoardSize);
+                drawer.DrawSecondPlayer();
 
-
-                Thread.Sleep(70);
+                Thread.Sleep(60);
             }
         }
 
