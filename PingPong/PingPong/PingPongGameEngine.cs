@@ -11,22 +11,22 @@
             var firstPlayerPosition = 0;
             var secondPlayerPosition = 0;
 
-            RemoveScrollBars();
+            ConsoleSettings();
             var drawer = new Drawer(new Writer());
             while (true)
             {
-                Console.CursorVisible = false;
                 drawer.DrawFirstPlayer(firstPlayerPosition, firstPlayerBoardSize);
-                drawer.DrawSecondPlayer();
+                drawer.DrawSecondPlayer(secondPlayerPosition, secondPlayerBoardSize);
 
                 Thread.Sleep(60);
             }
         }
 
-        private static void RemoveScrollBars()
+        private static void ConsoleSettings()
         {
             Console.BufferHeight = Console.WindowHeight;
             Console.BufferWidth = Console.WindowWidth;
+            Console.CursorVisible = false;
         }
     }
 }

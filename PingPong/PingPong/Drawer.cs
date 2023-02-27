@@ -19,13 +19,16 @@ namespace PingPong
         {
             for (int i = firstPlayerPosition; i < firstPlayerPosition + firstPlayerBoardSize; i++)
             {
-                this.writer.PrintAtPosition(0, i, '|');
+                this.writer.PrintAtPosition(2, i, '|');
             }
         }
 
-        public void DrawSecondPlayer()
+        public void DrawSecondPlayer(int secondPlayerPosition, int secondPlayerBoardSize)
         {
-
+            for (int i = secondPlayerPosition; i < secondPlayerPosition + secondPlayerBoardSize; i++)
+            {
+                this.writer.PrintAtPosition(Console.WindowWidth - 1, i, '|');
+            }
         }
     }
 }
