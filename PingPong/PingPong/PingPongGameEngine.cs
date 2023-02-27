@@ -8,8 +8,8 @@
             var secondPlayerBoardSize = 4;
             var ballPositionX = 0;
             var ballPositionY = 0;
-            var firstPlayerPosition = 0;
-            var secondPlayerPosition = 0;
+            var firstPlayerPosition = Console.WindowHeight / 2 - firstPlayerBoardSize / 2;
+            var secondPlayerPosition = Console.WindowHeight / 2 - secondPlayerBoardSize / 2;
 
             ConsoleSettings();
             var drawer = new Drawer(new Writer());
