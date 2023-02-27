@@ -30,5 +30,10 @@ namespace PingPong
                 this.writer.PrintAtPosition(Console.WindowWidth - 1, i, '|');
             }
         }
+
+        public void DrawTheBall(int x, int y)
+        {
+            this.writer.PrintAtPosition(x, y, '*');
+        }
     }
 }
