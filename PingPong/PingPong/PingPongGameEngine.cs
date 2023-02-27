@@ -10,6 +10,8 @@
             var ballPositionY = Console.WindowHeight / 2;
             var firstPlayerPosition = Console.WindowHeight / 2 - firstPlayerBoardSize / 2;
             var secondPlayerPosition = Console.WindowHeight / 2 - secondPlayerBoardSize / 2;
+            var firstPlayerResult = 0;
+            var secondPlayerResult = 0;
 
             ConsoleSettings();
             var drawer = new Drawer(new Writer());
@@ -19,6 +21,7 @@
                 drawer.DrawFirstPlayer(firstPlayerPosition, firstPlayerBoardSize);
                 drawer.DrawSecondPlayer(secondPlayerPosition, secondPlayerBoardSize);
                 drawer.DrawTheBall(ballPositionX, ballPositionY);
+                drawer.DrawResult(firstPlayerResult, secondPlayerResult);
                 Thread.Sleep(60);
             }
         }

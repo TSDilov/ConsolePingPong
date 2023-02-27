@@ -35,5 +35,10 @@ namespace PingPong
         {
             this.writer.PrintAtPosition(x, y, '*');
         }
+
+        public void DrawResult(int firstPlayerResult, int secondPlayerResult)
+        {
+            this.writer.PrintResult(firstPlayerResult, secondPlayerResult);
+        }
     }
 }
