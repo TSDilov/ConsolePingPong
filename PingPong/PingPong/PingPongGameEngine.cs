@@ -17,6 +17,7 @@
             var drawer = new Drawer(new Writer());
             while (true)
             {
+                firstPlayerPosition = Controller.FirstPlayerMove(firstPlayerPosition, firstPlayerBoardSize);
                 Console.Clear();
                 drawer.DrawFirstPlayer(firstPlayerPosition, firstPlayerBoardSize);
                 drawer.DrawSecondPlayer(secondPlayerPosition, secondPlayerBoardSize);
