@@ -21,7 +21,7 @@
             {
                 firstPlayerPosition = Controller.FirstPlayerMove(firstPlayerPosition, firstPlayerBoardSize);
                 secondPlayerPosition = Controller.SecondPlayerAIMove(secondPlayerPosition, secondPlayerBoardSize);
-                Controller.MoveBall(firstPlayerBoardSize, secondPlayerBoardSize, ref ballPositionX, ref ballPositionY, firstPlayerPosition, secondPlayerPosition, ref firstPlayerResult, ref secondPlayerResult, ref ballDirectionUp, ref ballDirectionRight);
+                Controller.MoveBall(firstPlayerBoardSize, secondPlayerBoardSize, ref ballPositionX, ref ballPositionY, firstPlayerPosition, secondPlayerPosition, ref firstPlayerResult, ref secondPlayerResult, ref ballDirectionUp, ref ballDirectionRight, drawer);
 
                 Console.Clear();
                 drawer.DrawFirstPlayer(firstPlayerPosition, firstPlayerBoardSize);
@@ -32,7 +32,6 @@
             }
         }
      
-
         private static void ConsoleSettings()
         {
             Console.BufferHeight = Console.WindowHeight;

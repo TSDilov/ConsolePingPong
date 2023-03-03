@@ -40,5 +40,15 @@ namespace PingPong
         {
             this.writer.PrintResult(firstPlayerResult, secondPlayerResult);
         }
+
+        public void DrawIfFirtstPlayerScore()
+        {
+            this.writer.PrintFirstPlayerScore();
+        }
+
+        public void DrawIfSecondPlayerScore()
+        {
+            this.writer.PrintSecondPlayerScore();
+        }
     }
 }
