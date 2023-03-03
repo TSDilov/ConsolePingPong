@@ -32,5 +32,29 @@ namespace PingPong
 
             return firstPlayerPosition;
         }
+
+        public static int SecondPlayerAIMove(int secondPlayerPosition, int secondPlayerBoard)
+        {
+            var randomGenerator = new Random();
+            var randomNumber = randomGenerator.Next(0, 2);
+
+            if (randomNumber == 0)
+            {
+                if (secondPlayerPosition > 0)
+                {
+                    secondPlayerPosition--;
+                }
+            }
+
+            if (randomNumber == 1)
+            {
+                if (secondPlayerPosition < Console.WindowHeight - secondPlayerBoard)
+                {
+                    secondPlayerPosition++;
+                }
+            }
+
+            return secondPlayerPosition;
+        }
     }
 }

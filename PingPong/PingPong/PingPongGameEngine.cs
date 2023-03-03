@@ -18,6 +18,7 @@
             while (true)
             {
                 firstPlayerPosition = Controller.FirstPlayerMove(firstPlayerPosition, firstPlayerBoardSize);
+                secondPlayerPosition = Controller.SecondPlayerAIMove(secondPlayerPosition, secondPlayerBoardSize);
                 Console.Clear();
                 drawer.DrawFirstPlayer(firstPlayerPosition, firstPlayerBoardSize);
                 drawer.DrawSecondPlayer(secondPlayerPosition, secondPlayerBoardSize);
